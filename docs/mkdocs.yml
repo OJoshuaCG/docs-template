@@ -1,0 +1,35 @@
+site_name: Template Documentation
+site_description: Plantilla para crear documentacion
+site_url: https://ojoshuacg.github.io/docs-template/
+
+repo_url: https://github.com/OJoshuaCG/docs-template
+edit_uri: edit/main/docs-template/docs
+
+nav:
+  - Inicio: index.md
+  - Personalizacion: design/css-file.md
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/custom.css
+
+# Disable search engine
+plugins: []
+
+# Some markdown utilities
+markdown_extensions:
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
