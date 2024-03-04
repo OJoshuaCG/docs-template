@@ -46,4 +46,29 @@ extra_css:
 
 ---
 
-<!-- ## Modo oscuro -->
+## Dark mode
+
+Si deseamos agregar el modo oscuro, tenemos que agregar el contexto `palette` dentro del contexto `theme` y algunas lineas en nuestro archivo `mkdocs.yml`
+
+```yml
+theme:
+  # ...
+  palette:
+  # Palette toggle for light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    toggle:
+      icon: material/weather-night
+      name: Dark mode
+    primary: custom
+
+  # Palette toggle for dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    toggle:
+      icon: material/weather-sunny
+      name: Light mode
+    primary: custom
+```
+
+<!-- ### CSS layout dark mode -->
