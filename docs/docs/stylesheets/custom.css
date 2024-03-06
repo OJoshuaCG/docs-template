@@ -2,6 +2,9 @@
 :root {
   --primary: #ff9f1c;
   --secondary: #2ec4b6;
+
+  --primary-dark: #ff8884;
+  --secondary-dark: #9fb456;
 }
 
 :root > * {
@@ -9,4 +12,12 @@
   --md-primary-fg-color: var(--primary);
   --md-typeset-a-color: var(--secondary);
   --md-accent-fg-color: var(--secondary);
+}
+
+@media screen{
+  [data-md-color-scheme=slate][data-md-color-primary=custom]{
+    --md-primary-fg-color: var(--primary-dark);
+    --md-typeset-a-color: var(--secondary-dark);
+    --md-accent-fg-color: var(--secondary-dark);
+  }
 }

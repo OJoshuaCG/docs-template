@@ -71,4 +71,28 @@ theme:
     primary: custom
 ```
 
-<!-- ### CSS layout dark mode -->
+
+### css custom
+
+Tambien es posible modificar el css de nuestro modo oscuro, es muy sencillo, para ello nos dirigimos al archivo css que hemos creado anteriormente, y crearemos 2 colores alternos para nuestro tema, tomando como referencia los primeros que hemos tomado.
+
+```css
+:root {
+  /* ... */
+
+  --primary-dark: #ff8884;
+  --secondary-dark: #9fb456;
+}
+```
+
+Luego de generar nuestros dos colores para el tema oscuro, toca modificar el `@media` encargado del tema oscuro
+
+```css
+@media screen{
+  [data-md-color-scheme=slate][data-md-color-primary=custom]{
+    --md-primary-fg-color: var(--primary-dark);
+    --md-typeset-a-color: var(--secondary-dark);
+    --md-accent-fg-color: var(--secondary-dark);
+  }
+}
+```
